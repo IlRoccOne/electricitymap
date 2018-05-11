@@ -255,7 +255,15 @@ d3.select('#checkbox-colorblind').on('change', () => {
 
 // Start initialising map
 try {
-  zoneMap = new ZoneMap('zones', { zoom: 1.5 })
+  zoneMap = new ZoneMap(
+    'zones',
+    {
+      zoom: 1.5,
+      strokeColor: 'lightgray',
+      clickableFill: '#E7EAEF',
+      strokeWidth: 0.3,
+    },
+  )
     .setCo2color(co2color)
     .onDragEnd(() => {
       // Somehow there is a drag event sent before the map data is loaded.

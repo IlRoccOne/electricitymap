@@ -54,8 +54,9 @@ const colorBlindCo2Color = d3.scaleSequential(d3.interpolateMagma)
   .domain([2000, 0])
   .clamp(true);
 const classicalCo2Color = d3.scaleLinear()
-  .domain([0, 375, 725, maxCo2])
-  .range(['green', 'orange', 'rgb(26,13,0)'])
+  // 400 is the middle value
+  .domain([0, 400, 600, 750, maxCo2])
+  .range(['#4AA963', '#FAB05E', '#86352C', 'rgb(26,13,0)'])
   .clamp(true);
 
 module.exports = {
